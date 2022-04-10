@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Memória</title>
+        <link rel="stylesheet" type="text/css" href="_css/style.css">
+        <script src="_js/jquery.js"></script>
+        
+    </head>
+
+    <body>
+        <div id="gameBoard">
+            <!-- <div class="card" data-icon="emo-04">
+                <div class="card_front">
+                    <img class="icon" src="_images/emo-04.png"> 
+                </div>
+
+                <div class="card_back">
+                    &lt;/&gt;
+                </div>
+            </div> -->
+        </div>
+
+        <div id="gameOver">
+            <div>
+                Parabéns, você ganhou o jogo!
+            </div>
+
+            <button id="restart" onclick="restart()">Jogue novamente</button>
+        </div>
+        
+        <div id="scoreScreen"></div>
+        
+        <hr>        
+        <button id="score" onclick="showScore()">Score</button>
+
+        <script src="_js/game.js"></script>
+        <script src="_js/script.js"></script>
+    </body>
+</html>

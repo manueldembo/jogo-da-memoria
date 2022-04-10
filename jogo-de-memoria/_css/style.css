@@ -1,0 +1,93 @@
+@charset "utf-8";
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#gameBoard{
+    display: grid;
+    grid-template: auto auto auto auto auto / auto auto auto auto;
+    justify-content: center;
+}
+.card{
+    margin: 10px;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+.flip{
+    transform: rotateY(180deg);
+}
+.card_front, .card_back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.45);
+    backface-visibility: hidden;
+}
+.card_front{
+    background-color: #101c2c;
+    transform: rotateY(180deg);
+}
+.card_back{
+    font-weight: bold;
+    background-color: #05c3ff;
+    font-size: 25px;
+    color: #101c2c;  
+}
+#gameOver, #scoreScreen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .9);
+    color: white;
+    font-size: 50px;
+    display: none;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+#restart, #score, #reset {
+    padding: 20px;
+    font-size: 20px;
+    background-color: yellow;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+#reset{
+    position: absolute;
+    top: calc(100% - 100px);
+    left: calc(100% - 100px);
+}
+#score{
+    margin-left: 50px;
+}
+#scoreScreen{
+    text-align: left;
+    font-size: 40px; 
+}
+#closeScoreScre{
+    cursor: pointer;
+    display: inline;
+    float: right;
+    margin: 20px;
+}
+#closeScoreScre:hover{
+    color: #ccc;
+}
+#srceen {
+    margin: 50px;   
+}
